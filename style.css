@@ -1,0 +1,377 @@
+/* Thiết lập font chữ, màu sắc cơ bản cho toàn bộ trang */
+body {
+    font-family: 'Montserrat', sans-serif; /* Sử dụng Montserrat làm font chính */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Nền xám nhạt */
+    color: #333;
+    line-height: 1.7; /* Tăng chiều cao dòng cho dễ đọc */
+    scroll-behavior: smooth; /* Cuộn mượt khi nhấp vào liên kết điều hướng */
+}
+
+/* Kiểu dáng chung cho các heading */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; /* Làm đậm hơn cho tiêu đề */
+    color: #2c3e50; /* Màu tiêu đề đậm */
+}
+
+/* Kiểu dáng chung cho đoạn văn bản, danh sách */
+p, ul, li, span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Font weight bình thường cho văn bản */
+    color: #333; /* Màu chữ mặc định */
+}
+
+
+.container {
+    max-width: 900px; /* Chiều rộng tối đa của nội dung */
+    margin: 0 auto; /* Căn giữa */
+    padding: 0 20px; /* Khoảng đệm hai bên */
+}
+
+/* Các kiểu dáng chung cho card/box nội dung */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Hiệu ứng nâng nhẹ khi di chuột */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Kiểu dáng liên kết chung */
+a {
+    color: #007bff; /* Màu xanh dương cho liên kết */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3; /* Màu xanh đậm hơn khi di chuột */
+    text-decoration: underline;
+}
+
+/* PHẦN ĐẦU TRANG */
+.hero-section {
+    background-color: #2c3e50; /* Xám xanh đậm */
+    color: #ffffff;
+    padding: 70px 0 30px; /* Điều chỉnh padding trên dưới */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1; /* Đảm bảo nằm trên các phần khác */
+}
+
+.profile-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%; /* Ảnh tròn */
+    border: 6px solid #87ceeb; /* Viền màu xanh nhạt */
+    object-fit: cover; /* Đảm bảo ảnh vừa khung */
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section h1 {
+    margin: 0 0 8px;
+    font-size: 3.2em; /* Kích thước tên */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #ffffff; /* Đảm bảo tên màu trắng */
+}
+
+.tagline {
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
+
+.university {
+    font-size: 1.1em;
+    font-weight: 300;
+    margin-bottom: 25px;
+    color: #d0d0d0;
+    text-transform: uppercase; /* Chữ hoa cho tên trường */
+}
+
+/* Kiểu dáng cho phần thông tin liên hệ (hàng dọc) */
+.contact-info {
+    display: flex; /* Dùng flexbox */
+    flex-direction: column; /* Xếp các mục theo hàng dọc */
+    align-items: flex-start; /* Căn giữa các mục theo chiều ngang */
+    gap: 10px; /* Khoảng cách giữa các mục liên hệ */
+    margin-top: 25px; /* Khoảng cách từ University tagline */
+    width: 100%; /* <-- THÊM DÒNG NÀY ĐỂ NÓ CHIẾM ĐỦ CHIỀU RỘNG TRONG CONTAINER CỦA NÓ */
+    max-width: 350px; /* <-- THÊM DÒNG NÀY ĐỂ GIỚI HẠN CHIỀU RỘNG CỦA KHỐI contact-info, NẾU KHÔNG NÓ SẼ TRÀN HẾT RA */
+    margin-left: auto; /* <-- THÊM DÒNG NÀY ĐỂ CĂN GIỮA KHỐI contact-info */
+    margin-right: auto; /* <-- THÊM DÒNG NÀY ĐỂ CĂN GIỮA KHỐI contact-info */
+}
+
+.contact-item {
+    font-size: 1.05em;
+    display: flex; /* Dùng flexbox cho từng mục (icon và text) */
+    align-items: center; /* Căn giữa icon và text */
+}
+
+.contact-info i {
+    margin-right: 10px; /* Tăng khoảng cách giữa icon và text */
+    color: #87ceeb; /* Màu icon */
+    font-size: 1.1em; /* Kích thước icon lớn hơn một chút */
+}
+
+.contact-info a, .contact-info span {
+    color: #e0e0e0; /* Màu chữ cho link và text */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+/* THANH ĐIỀU HƯỚNG */
+.navbar {
+    background-color: #34495e; /* Màu đậm hơn cho navbar */
+    padding: 12px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    position: sticky; /* Sticky navbar */
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Dùng flexbox để căn chỉnh các mục */
+    justify-content: center;
+    gap: 30px; /* Khoảng cách giữa các mục */
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05em;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active { /* Thêm class 'active' nếu bạn muốn highlight mục đang xem */
+    background-color: #007bff;
+}
+
+/* NỘI DUNG CHÍNH (MAIN) */
+main {
+    padding: 40px 0;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    /* Đã định nghĩa font chung ở trên */
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 10px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+section h2 i {
+    margin-right: 12px;
+    color: #007bff;
+}
+
+/* CÁC PHẦN CỤ THỂ */
+
+/* Phần Về tôi */
+#about p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+#about p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Phần Học vấn, Kinh nghiệm, Hoạt động */
+.edu-item, .exp-item, .activity-item {
+    padding: 20px 25px;
+    border-left: 5px solid #007bff; /* Đường viền bên trái */
+    margin-bottom: 20px;
+}
+
+.edu-item h3, .exp-item h3, .activity-item h3 {
+    margin-top: 0;
+    color: #007bff;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.edu-item p strong, .exp-item p strong, .activity-item p strong {
+    color: #495057; /* Màu đậm hơn cho tên tổ chức */
+}
+
+.edu-item ul, .exp-item ul, .activity-item ul {
+    list-style-type: disc;
+    margin-left: 25px;
+    padding: 0;
+    font-size: 0.95em;
+}
+
+.edu-item ul li, .exp-item ul li, .activity-item ul li {
+    margin-bottom: 8px;
+}
+
+/* Phần Kỹ năng */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Tự động chia cột */
+    gap: 20px; /* Khoảng cách giữa các box kỹ năng */
+}
+
+.skills-category {
+    border-left: 5px solid #6c757d; /* Viền xám cho box kỹ năng */
+    padding: 20px 25px;
+    margin-bottom: 0; /* Đã có gap */
+}
+
+.skills-category h3 {
+    margin-top: 0;
+    /* Đã định nghĩa font chung ở trên */
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.skills-category h3 i {
+    margin-right: 8px;
+    color: #6c757d;
+}
+
+.skill-tag {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 8px 15px;
+    margin: 6px 6px 6px 0; /* Khoảng cách giữa các tag */
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 500;
+    white-space: normal; /* Ngăn không cho chữ xuống dòng trong tag */
+}
+
+/* Phần Dự án */
+.project-item {
+    padding: 20px 25px;
+    border-left: 5px solid #28a745; /* Viền xanh lá cây cho dự án */
+    margin-bottom: 20px;
+}
+
+.project-item h3 {
+    margin-top: 0;
+    color: #007bff;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.project-meta {
+    font-style: italic;
+    color: #6c757d;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.project-links a {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: 600;
+}
+
+.project-links a i {
+    margin-right: 5px;
+}
+
+/* PHẦN CHÂN TRANG */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    margin-top: 50px;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+    .tagline {
+        font-size: 1.1em;
+    }
+    .university {
+        font-size: 0.9em;
+    }
+    /* contact-info đã được làm responsive hàng dọc mặc định */
+    .navbar ul {
+        flex-direction: column; /* Menu dọc trên mobile */
+        gap: 10px;
+    }
+    .navbar ul li a {
+        padding: 10px;
+    }
+    main {
+        padding: 20px 0;
+    }
+    section h2 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+    .card {
+        padding: 20px;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr; /* Một cột trên mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 50px 0 20px;
+    }
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+    .hero-section h1 {
+        font-size: 2em;
+    }
+    .tagline {
+        font-size: 1em;
+    }
+    .university {
+        font-size: 0.8em;
+    }
+    .skill-tag {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+}
